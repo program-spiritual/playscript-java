@@ -5,26 +5,52 @@ playscript是在准备《编译原理之美》课程期间开发的一门脚本�
 * 静态类型：支持int、long、float、double等基础数据类型。
 * 支持函数，并且函数是一等公民，可以嵌套声明函数，支持闭包。 
 * 支持面向对象特性。  
-* Coming soon: 很快将添加更多的脚本用例，展示playscript的功能。
+
 
 ### 构建和开发
-从代码库中克隆下代码以后，可以基于源代码构建一个项目。或者使用里面原来带的idea项目文件。后面我将提供Maven的项目文件。  
+从代码库中克隆下代码以后，可以基于源代码构建一个项目。
+或者使用里面原来带的idea项目文件。
+后面我将提供Maven的项目文件。  
 本项目依赖Antlr的运行库。相应的jar包已经包含在了[lib目录](lib)下。  
 在idea项目中，我设置了一个PlayScript scratch任务，可以解析执行examples目录中的scratch.play文件。你可以在这个文件里随意写一些脚本，并编译执行，或者跟踪调试。
+
+## 编译前准备和编译后配置
+
+## 编译前
+
+需要在项目结构里面设置依赖库,否则编译失败
+
+![QQ截图20200116151308.png](https://static.nodejs7.com/2020/01/588373789.png)
+
+## 编译后
+
+需要在环境变量中设置 依赖库的 `CLASSPATH`
+
+以 `windows` 系统 为例：
+```shell script
+
+D:\IdeaProjects\playscript-java\out\production\playscript-java\;D:\IdeaProjects\playscript-java\lib\*
+```
+
 
 ### 运行playscript
 在运行之前：
 * 要设置好本机的java环境；
-* 设置好CLASSPATH,让java能够找到play包中的类。    
+* 设置好`CLASSPATH`,让java能够找到play包中的类。    
      
-命令行工具 java play.PlayScript     
->usage: java play.PlayScript [-h | --help | -o outputfile | -S | -v | -ast-dump] [scriptfile]  
->	-h or --help : print this help information  
->	-v verbose mode : dump AST and symbols   
->	-ast-dump : dump AST in lisp style   
->	-o outputfile : file pathname used to save generated code, eg. assembly code   
->	-S : compile to assembly code   
->	scriptfile : file contains playscript code   
+命令行工具 `java play.PlayScript `    
+
+```shell script
+usage: 
+  java play.PlayScript [-h | --help | -o 输出文件 | -S | -v | -ast-dump] [脚本文件]  
+	-h or --help : 打印帮助信息 
+	-v verbose mode : 转储AST和符号   
+	-ast-dump : 以Lisp样式转储AST   
+	-o outputfile : 用于保存生成的代码的文件路径名,例如:汇编代码   
+	-S : 编译为汇编代码   
+	scriptfile : 文件包含的脚本代码  
+```
+
 
 举例:   
 >java play.PlayScript    
@@ -73,5 +99,4 @@ playscript是在准备《编译原理之美》课程期间开发的一门脚本�
 * [SematicValidator.java](src/main/play/SematicValidator.java) 语义分析-5：剩余所有的语义分析。
 
 ---
-## 注意
-该目录下的代码会随时更新。
+
