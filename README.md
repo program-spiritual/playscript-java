@@ -65,10 +65,25 @@ usage:
 >java play.PlayScript -v scratch.play   
 >编译和执行scratch.play脚本，并输出AST和符号表   
 
+## mac os X 
 设置你的bash命令，可以使用起来更方便，比如，我在.bash_profile文件中添加了：    
 >alias play='java play.PlayScript'   
 这样，运行一个.play脚本的时候，可以很简单：  
 >play scratch.play
+
+## windows 系统用户 
+设置阁下的cmder 快捷命令，使用起来也比较方便
+阁下可以下先查看我之前写的配置 cmder 的快捷命令的文章，连接如下所示
+
+之后阁下可以在最后一行添加如下代码：
+
+```shell script
+play='java play.PlayScript'
+```
+
+这样，运行一个.play脚本的时候，可以很简单：  
+>play scratch.play
+
 
 ### examples目录中的示例脚本
 添加了一些示例脚本，来演示playscript的功能，大家可以玩一玩！    
