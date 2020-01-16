@@ -72,8 +72,11 @@ usage:
 >play scratch.play
 
 ## windows 系统用户 
-设置阁下的cmder 快捷命令，使用起来也比较方便
-阁下可以下先查看我之前写的配置 cmder 的快捷命令的文章，连接如下所示
+设置阁下的 cmder 快捷命令，使用起来也比较方便
+
+阁下可以下先查看我之前写的配置 cmder 的快捷命令的文章，如下所示
+
+[windows cmder 仿 mac 操作习惯配置 命令行 - 疯狂的AI](https://ai.nodejs7.com/2020/01/16/121.html)
 
 之后阁下可以在最后一行添加如下代码：
 
@@ -82,6 +85,7 @@ play='java play.PlayScript'
 ```
 
 这样，运行一个.play脚本的时候，可以很简单：  
+
 >play scratch.play
 
 
