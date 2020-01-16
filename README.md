@@ -67,7 +67,7 @@ usage:
 
 ## 简化命令的方式
 
-### mac os X 
+### mac os X / linux / unix 
 设置阁下的bash命令，可以使用起来更方便。
 比如，我在.bash_profile文件中添加了： 
    
