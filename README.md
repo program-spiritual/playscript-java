@@ -7,7 +7,7 @@ playscript是在准备《编译原理之美》课程期间开发的一门脚本�
 * 支持面向对象特性。  
 
 
-### 构建和开发
+## 构建和开发
 从代码库中克隆下代码以后，可以基于源代码构建一个项目。
 或者使用里面原来带的idea项目文件。
 后面我将提供Maven的项目文件。  
@@ -87,7 +87,7 @@ usage:
 之后阁下可以在最后一行添加如下代码：
 
 ```shell script
-play=java play.PlayScript
+play=java play.PlayScript $*
 ```
 
 这样，运行一个.play脚本的时候，可以很简单：  
